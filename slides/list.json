@@ -24,7 +24,8 @@
     {
         "filename": "terminology.html",
         "attr": {
-            "class": "center"
+            "class": "center",
+            "data-background": "#222"
         }
     },
     {
