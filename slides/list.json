@@ -13,13 +13,18 @@
     },
     {
         "attr": {
-            "data-background-video": "resources/brainfreeze.webm",
-            "data-background-video-loop": null
+            "data-background": "resources/mindblown.gif"
         }
     },
     {
         "attr": {
-            "data-background": "resources/mindblown.gif"
+            "data-background": "resources/mindblown2.gif"
+        }
+    },
+    {
+        "filename": "terminology.html",
+        "attr": {
+            "class": "center"
         }
     },
     {
@@ -188,12 +193,6 @@
         }
     },
     {
-        "attr": {
-            "data-background-video": "resources/magic.webm",
-            "data-background-video-loop": null
-        }
-    },
-    {
         "filename": "end-demos.html",
         "attr": {
             "class": "center"
@@ -204,5 +203,10 @@
         "attr": {
             "class": "center"
         }
-    }             
+    },             
+    {
+        "attr": {
+            "data-background": "resources/micdrop.gif"
+        }
+    }
 ]
