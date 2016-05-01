@@ -1,0 +1,24 @@
+<h3 style="text-align: left;"><span style="color:#FFB224">Extension API</h3>
+<pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;">
+<code id="extensioncode" class="javascript hljs" style="font-size: 0.8em;tab-size:4;max-height: 500px">define(['qlik','./mekko-properties'], function(qlik, properties) {
+  return {
+	initialProperties: {
+      // Generic Object Properties
+	  disclaimer: "Overuse of Mekko charts may turn you into a management consultant",
+	  qHyperCubeDef: {
+        qDimensions: [],
+        qMeasures: [],
+		qInitialDataFetch: [{
+		  qWidth: 3,
+		  qHeight: 3000
+		}]
+	  }
+	},
+	definition: properties,
+	paint: function($element, layout) {
+	  // Paint the extension
+	}
+  }
+});    
+</code>
+</pre>

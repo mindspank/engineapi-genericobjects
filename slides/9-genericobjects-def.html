@@ -1,0 +1,22 @@
+<h3 style="text-align: left;"><span style="color:#FFB224">Definition</h3>
+<pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;">
+<code id="extensioncode" class="javascript hljs" style="font-size: 0.8em;tab-size:4;max-height: 500px">
+	{
+		"qInfo": {
+			"qType": "MyCustomObject",
+			"qId": ""
+		},
+		"myCustomProperty": "This string will be persist in my app by QIX",
+		"salesAmount": {
+			"qStringExpression": { // This will evaluate to a formatted string
+				"qExpr": "Sum(Sales)"
+			}
+		},
+		"noOfDeals": {
+			"qValueExpression": {
+				"qExpr": "Count(SaleId)"
+			}
+		}
+	}
+</code>
+</pre>

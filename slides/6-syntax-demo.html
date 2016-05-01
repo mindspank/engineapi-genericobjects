@@ -1,0 +1,25 @@
+<p style="text-align: left;">Engine API Syntax</p>
+<div class="plain" style="display:flex;width:100%;margin: 20px 0;">
+    <button id="syntaxdemoconnect" class="presentation-button">Connect</button>
+    <code style="font-size: 14px;padding:10px;" class="javscript hljs">new WebSocket('ws://localhost:4848/app/engineData')</code>
+</div>
+
+<div class="plain"" style="display:flex;width:100%">
+    
+    <div style="flex:1;min-width: 50%;text-align: left;">
+    <pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;padding: 10px 0 0 10px;">Request
+        <code id="syntaxrequest" class="json hljs" style="font-size: 1em;tab-size:4;padding: 0;" contentEditable="true">{
+    "method": "ProductVersion",
+    "id": 1,
+    "handle": -1,
+    "params": [],
+    "jsonrpc": "2.0"
+}</code></pre>
+    </div>
+    
+    <div style="flex:1;min-width: 50%;text-align: left;margin-left: 20px;">
+    <pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;padding: 10px 0px 0px 10px;">Response
+        <code id="syntaxresponse" class="javascript hljs" style="font-size: 1em;tab-size:4;padding: 0;" contentEditable="false"></code></pre>
+    </div>
+</div>
+<button style="text-align: left;" class="presentation-button" id="syntaxdemosend">Send</button>

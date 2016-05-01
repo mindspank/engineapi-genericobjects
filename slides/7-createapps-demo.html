@@ -1,0 +1,25 @@
+<p style="text-align: left;">Create app using qsocks</p>
+<div class="plain"" style="display:flex;width:100%">
+    
+    <div style="flex:1;min-width: 600px;margin-right:20px;text-align: left;">  
+    <pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;">
+        <code id="createappdemo" class="javascript hljs" style="font-size: 0.8em;tab-size:4;" contentEditable="false">qsocks.Connect()
+.then( (global) => global.createDocEx('Qonnections Demo') )
+.then( (app) => {
+    
+    const loadscript = 
+    `Load RecNo() as Dim, Rand() * 100 as Value
+     Autogenerate 100;`
+    
+    return app.setScript(loadscript)
+    .then(() => app.doReload())
+    .then(() => app.doSave())
+
+})</code></pre>
+    </div>
+    
+    <div id="progressareacreateapps" style="flex: 1;display: flex;align-items: center;justify-content: center;">
+        <img src="resources/loader.svg" alt="" class="progressspinner plain" style="display: none;">
+    </div>
+</div>
+<button style="text-align: left;" class="presentation-button" id="createappexecute">Run code</button>

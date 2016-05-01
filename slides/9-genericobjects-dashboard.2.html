@@ -1,0 +1,17 @@
+<p style="text-align: left;">A real generic object tree</p>
+<div class="plain"" style="display:flex;width:100%">
+    
+    <div style="flex:1;min-width: 50%;text-align: left;">
+    <pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;padding: 10px 0 0 10px;">Request
+        <code id="getobjecttree" class="javascript hljs" style="font-size: 0.8em;tab-size:4;padding: 0;" contentEditable="false">qsocks.ConnectOpenApp({
+    appname: "Helpdesk Management"
+})
+.then((conn) => {
+    conn[1].getObject('1ff88551-9c4d-41e0-b790-37f4c11d3df8')
+})
+.then((obj) => obj.getFullPropertyTree())
+.then((properties) => print)
+}
+ </code></pre>
+    </div>
+</div>

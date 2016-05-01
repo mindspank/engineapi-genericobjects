@@ -1,0 +1,208 @@
+[
+    {
+       "filename": "holla.html",
+       "attr": {
+           "class": "center"
+       } 
+    },
+    {
+        "filename": "disclaimer.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "attr": {
+            "data-background-video": "resources/brainfreeze.webm",
+            "data-background-video-loop": null
+        }
+    },
+    {
+        "attr": {
+            "data-background": "resources/mindblown.gif"
+        }
+    },
+    {
+        "filename": "1-engineapi.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "2-cornerstone.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "3-nomoresecrets.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "3-enginedemos.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "attr": {
+            "data-background-iframe": "http://viz.axisgroup.com/acrossborders/#/origins&asylums"
+        }
+    },
+    {
+        "filename": "3-enginedemos.2.html",
+        "attr": {
+            "class": "center"
+        }
+    },      
+    {
+        "filename": "3-enginedemos.3.html",
+        "attr": {
+            "class": "center"
+        }
+    },            
+    {
+        "filename": "4-protocolproperties.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "5-architecture.html",
+        "attr": {
+            "data-background": "#fff"
+        }
+    },
+    {
+        "filename": "5-architecture-traffic.html",
+        "attr": {
+            "data-background": "#fff"
+        }
+    },
+    {
+        "filename": "6-syntax.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "6-syntax-demo.html",
+        "attr": {
+            "class": "left",
+            "data-state": "syntaxdemo"
+        }
+    },
+    {
+        "filename": "6-syntax-resources.html",
+        "attr": {
+            "class": "center"
+        }
+    },    
+    {
+        "filename": "7-createapps-demo.html",
+        "attr": {
+            "data-background": "#222",
+            "class": "left",
+            "data-state": "createappsdemo"
+        }
+    },
+    {
+        "attr": {
+            "data-background-iframe": "http://help.qlik.com/en-US/sense-developer/2.2/Subsystems/EngineAPI/Content/Classes/classes.htm"
+        }
+    },
+    {
+        "filename": "9-genericobjects.html",
+        "attr": {
+            "class": "center"
+        }
+    },  
+    {
+        "filename": "9-genericobjects.2.html",
+        "attr": {
+            "data-background": "#222",
+            "class": "center"
+        }
+    },    
+    {
+        "filename": "genericobject-extensions.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "genericobject-capabilities.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-types.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-def.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-layout.html",
+        "attr": {
+            "class": "center"
+        }
+    },        
+    {
+        "filename": "9-genericobjects-dashboard.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-dashboard.1.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-dashboard.15.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-dashboard.2.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "9-genericobjects-dashboard.3.html",
+        "attr": {
+            "class": "center",
+            "data-background": "#fff"
+        }
+    },
+    {
+        "attr": {
+            "data-background-video": "resources/magic.webm",
+            "data-background-video-loop": null
+        }
+    },
+    {
+        "filename": "end-demos.html",
+        "attr": {
+            "class": "center"
+        }
+    },
+    {
+        "filename": "end.html",
+        "attr": {
+            "class": "center"
+        }
+    }             
+]

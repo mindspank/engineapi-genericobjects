@@ -1,0 +1,38 @@
+#progressareacreateapps a {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.presentation-button {
+    outline: 0;
+    border: 0;
+    padding: 7px 20px;
+    font-size: 20px;
+    color: #000;
+    background: #FFB224;
+    cursor: pointer;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.progressspinner {
+    flex: 1;
+    background: transparent !important;
+    max-width: 70% !important;
+    -webkit-animation-name: rotatespinner;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform: rotate(360deg);
+}
+
+@-webkit-keyframes rotatespinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}

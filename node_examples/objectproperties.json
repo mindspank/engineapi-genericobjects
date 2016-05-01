@@ -1,0 +1,957 @@
+{
+    "qProperty": {
+        "qInfo": {
+            "qId": "1ff88551-9c4d-41e0-b790-37f4c11d3df8",
+            "qType": "sheet"
+        },
+        "qMetaDef": {
+            "title": "Dashboard",
+            "description": "Quickly analyze the pulse of the Helpdesk organization. See the case priority breakdown, cases by department, cases by type, etc."
+        },
+        "rank": 0.5,
+        "columns": 24,
+        "rows": 12,
+        "cells": [
+            {
+                "name": "a5e0f12c-38f5-4da9-8f3f-0e4566b28398",
+                "type": "barchart",
+                "col": 16,
+                "row": 0,
+                "colspan": 8,
+                "rowspan": 7
+            },
+            {
+                "name": "298bbd6d-f23d-4469-94a2-df243d680e0c",
+                "type": "scatterplot",
+                "col": 5,
+                "row": 0,
+                "colspan": 11,
+                "rowspan": 7
+            },
+            {
+                "name": "hRZaKk",
+                "type": "linechart",
+                "col": 5,
+                "row": 7,
+                "colspan": 19,
+                "rowspan": 5
+            },
+            {
+                "name": "RuTpzNW",
+                "type": "kpi",
+                "col": 0,
+                "row": 0,
+                "colspan": 5,
+                "rowspan": 4
+            },
+            {
+                "name": "JARjh",
+                "type": "kpi",
+                "col": 0,
+                "row": 4,
+                "colspan": 5,
+                "rowspan": 4
+            },
+            {
+                "name": "JsVPe",
+                "type": "kpi",
+                "col": 0,
+                "row": 8,
+                "colspan": 5,
+                "rowspan": 4
+            }
+        ],
+        "thumbnail": {
+            "qStaticContentUrlDef": {
+                "qUrl": "/media/9a4a9a67-921a-4401-a6ef-adfc729022e0/apppages-helpdeskmgmt_1.jpg"
+            }
+        }
+    },
+    "qChildren": [
+        {
+            "qProperty": {
+                "qInfo": {
+                    "qId": "a5e0f12c-38f5-4da9-8f3f-0e4566b28398",
+                    "qType": "barchart"
+                },
+                "qMetaDef": {},
+                "qHyperCubeDef": {
+                    "qDimensions": [
+                        {
+                            "qDef": {
+                                "qGrouping": "N",
+                                "qFieldDefs": [
+                                    "Case Owner Group"
+                                ],
+                                "qFieldLabels": [
+                                    "Case Owner Group"
+                                ],
+                                "qSortCriterias": [
+                                    {
+                                        "qSortByAscii": 1,
+                                        "qSortByLoadOrder": 1,
+                                        "qExpression": {}
+                                    }
+                                ],
+                                "qNumberPresentations": [],
+                                "qActiveField": 0,
+                                "autoSort": true,
+                                "cId": "cqyQv",
+                                "othersLabel": "Others"
+                            },
+                            "qOtherTotalSpec": {
+                                "qOtherMode": "OTHER_OFF",
+                                "qOtherCounted": {
+                                    "qv": "10"
+                                },
+                                "qOtherLimit": {
+                                    "qv": "0"
+                                },
+                                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                                "qForceBadValueKeeping": true,
+                                "qApplyEvenWhenPossiblyWrongResult": true,
+                                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                                "qTotalMode": "TOTAL_OFF",
+                                "qReferencedExpression": {}
+                            },
+                            "qOtherLabel": {},
+                            "qTotalLabel": {},
+                            "qCalcCond": {},
+                            "qAttributeExpressions": []
+                        }
+                    ],
+                    "qMeasures": [
+                        {
+                            "qLibraryId": "eqZjE",
+                            "qDef": {
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "QqmmEBg"
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [
+                                {
+                                    "qExpression": "If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner Group],Priority))='Low', rgb(39,110,39),  If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner Group],Priority))='Medium', rgb(255,207,2),  If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner Group],Priority))='High', rgb(249,63,23))))",
+                                    "type": "colorByExpression"
+                                }
+                            ],
+                            "qCalcCond": {},
+                            "showInPercent": false
+                        }
+                    ],
+                    "qInterColumnSortOrder": [
+                        1,
+                        0
+                    ],
+                    "qSuppressMissing": true,
+                    "qInitialDataFetch": [
+                        {
+                            "qLeft": 0,
+                            "qTop": 0,
+                            "qWidth": 17,
+                            "qHeight": 500
+                        }
+                    ],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": 10000,
+                    "qNoOfLeftDims": -1,
+                    "qAlwaysFullyExpanded": true,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qLayoutExclude": {}
+                },
+                "refLine": {
+                    "refLines": []
+                },
+                "showTitles": true,
+                "title": "Avg Case Resolution Time (Days)",
+                "subtitle": "* color represents the priority with the most open cases",
+                "footnote": "",
+                "barGrouping": {
+                    "grouping": "grouped",
+                    "showAs": "percentage"
+                },
+                "orientation": "horizontal",
+                "gridLine": {
+                    "auto": true,
+                    "spacing": 2
+                },
+                "dataPoint": {
+                    "showLabels": true
+                },
+                "cutAxis": true,
+                "color": {
+                    "auto": false,
+                    "mode": "byExpression",
+                    "singleColor": 3,
+                    "persistent": false,
+                    "measureScheme": "sg",
+                    "reverseScheme": false,
+                    "dimensionScheme": "12",
+                    "dimensionId": "",
+                    "colorExpression": "If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner Group],Priority))='Low', rgb(39,110,39),  If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner Group],Priority))='Medium', rgb(255,207,2),  If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner Group],Priority))='High', rgb(249,63,23))))"
+                },
+                "legend": {
+                    "show": false,
+                    "dock": "auto",
+                    "showTitle": true
+                },
+                "dimensionAxis": {
+                    "show": "labels",
+                    "label": "auto",
+                    "dock": "near"
+                },
+                "measureAxis": {
+                    "show": "none",
+                    "label": "horizontal",
+                    "dock": "near",
+                    "spacing": 0.75,
+                    "autoMinMax": true,
+                    "minMax": "min",
+                    "min": 0,
+                    "max": 10
+                },
+                "visualization": "barchart"
+            },
+            "qChildren": []
+        },
+        {
+            "qProperty": {
+                "qInfo": {
+                    "qId": "298bbd6d-f23d-4469-94a2-df243d680e0c",
+                    "qType": "scatterplot"
+                },
+                "qMetaDef": {},
+                "qHyperCubeDef": {
+                    "qDimensions": [
+                        {
+                            "qDef": {
+                                "qGrouping": "N",
+                                "qFieldDefs": [
+                                    "Case Owner"
+                                ],
+                                "qFieldLabels": [
+                                    ""
+                                ],
+                                "qSortCriterias": [
+                                    {
+                                        "qSortByAscii": 1,
+                                        "qSortByLoadOrder": 1,
+                                        "qExpression": {}
+                                    }
+                                ],
+                                "qNumberPresentations": [],
+                                "qActiveField": 0,
+                                "autoSort": true,
+                                "cId": "JBtELKR",
+                                "othersLabel": "Others"
+                            },
+                            "qOtherTotalSpec": {
+                                "qOtherMode": "OTHER_OFF",
+                                "qOtherCounted": {
+                                    "qv": "10"
+                                },
+                                "qOtherLimit": {
+                                    "qv": "0"
+                                },
+                                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                                "qForceBadValueKeeping": true,
+                                "qApplyEvenWhenPossiblyWrongResult": true,
+                                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                                "qTotalMode": "TOTAL_OFF",
+                                "qReferencedExpression": {}
+                            },
+                            "qOtherLabel": {},
+                            "qTotalLabel": {},
+                            "qCalcCond": {},
+                            "qAttributeExpressions": []
+                        }
+                    ],
+                    "qMeasures": [
+                        {
+                            "qLibraryId": "eqZjE",
+                            "qDef": {
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "BgHmyas",
+                                "numFormatFromTemplate": true
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [
+                                {
+                                    "qExpression": "If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner],Priority))='Low', rgb(39,110,39), \nIf(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner],Priority))='Medium', rgb(255,207,2), \nIf(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner],Priority))='High', rgb(249,63,23))))",
+                                    "type": "colorByExpression"
+                                }
+                            ],
+                            "qCalcCond": {}
+                        },
+                        {
+                            "qLibraryId": "MPcQeZ",
+                            "qDef": {
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "ELqyeqp",
+                                "numFormatFromTemplate": true
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [],
+                            "qCalcCond": {}
+                        }
+                    ],
+                    "qInterColumnSortOrder": [
+                        2,
+                        1,
+                        0
+                    ],
+                    "qSuppressMissing": true,
+                    "qInitialDataFetch": [
+                        {
+                            "qLeft": 0,
+                            "qTop": 0,
+                            "qWidth": 4,
+                            "qHeight": 1000
+                        }
+                    ],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": -1,
+                    "qNoOfLeftDims": -1,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qLayoutExclude": {}
+                },
+                "refLine": {
+                    "refLinesX": [
+                        {
+                            "show": true,
+                            "label": "Case Duration Threshold",
+                            "color": 0,
+                            "refLineExpr": {
+                                "label": {
+                                    "qStringExpression": {
+                                        "qExpr": "20"
+                                    }
+                                },
+                                "value": {
+                                    "qValueExpression": {
+                                        "qExpr": "20"
+                                    }
+                                }
+                            },
+                            "cId": "XJkqp"
+                        }
+                    ],
+                    "refLinesY": []
+                },
+                "showTitles": true,
+                "title": "Open Cases vs Duration",
+                "subtitle": "* color represents the priority with the most open cases",
+                "footnote": "",
+                "dataPoint": {
+                    "bubbleSizes": 10,
+                    "rangeBubbleSizes": [
+                        2,
+                        8
+                    ]
+                },
+                "labels": {
+                    "mode": 1
+                },
+                "gridLine": {
+                    "auto": true,
+                    "spacing": 2
+                },
+                "color": {
+                    "auto": false,
+                    "mode": "byExpression",
+                    "singleColor": 3,
+                    "persistent": false,
+                    "expressionLabel": "",
+                    "expressionIsColor": true,
+                    "measureScheme": "sg",
+                    "reverseScheme": false,
+                    "dimensionScheme": "12",
+                    "autoMinMax": true,
+                    "measureMin": 0,
+                    "measureMax": 10,
+                    "colorExpression": "If(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner],Priority))='Low', rgb(39,110,39), \nIf(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner],Priority))='Medium', rgb(255,207,2), \nIf(firstsortedvalue( Priority, -Aggr(Count({<[Cases Open/Closed]={'Open Cases'}>}Distinct [%CaseId] ),[Case Owner],Priority))='High', rgb(249,63,23))))"
+                },
+                "legend": {
+                    "show": false,
+                    "dock": "auto",
+                    "showTitle": true
+                },
+                "xAxis": {
+                    "show": "all",
+                    "dock": "near",
+                    "spacing": 0.5,
+                    "autoMinMax": true,
+                    "minMax": "min",
+                    "min": 0,
+                    "max": 10
+                },
+                "yAxis": {
+                    "show": "all",
+                    "dock": "near",
+                    "spacing": 0.5,
+                    "autoMinMax": false,
+                    "minMax": "min",
+                    "min": 0,
+                    "max": 10
+                },
+                "visualization": "scatterplot",
+                "version": 0.96
+            },
+            "qChildren": []
+        },
+        {
+            "qProperty": {
+                "qInfo": {
+                    "qId": "hRZaKk",
+                    "qType": "linechart"
+                },
+                "qMetaDef": {},
+                "qHyperCubeDef": {
+                    "qDimensions": [
+                        {
+                            "qDef": {
+                                "qGrouping": "N",
+                                "qFieldDefs": [
+                                    "Date"
+                                ],
+                                "qFieldLabels": [
+                                    "Date"
+                                ],
+                                "qSortCriterias": [
+                                    {
+                                        "qSortByNumeric": 1,
+                                        "qSortByLoadOrder": 1,
+                                        "qExpression": {}
+                                    }
+                                ],
+                                "qNumberPresentations": [],
+                                "qActiveField": 0,
+                                "autoSort": true,
+                                "cId": "pAFEFy",
+                                "othersLabel": "Others"
+                            },
+                            "qNullSuppression": true,
+                            "qOtherTotalSpec": {
+                                "qOtherMode": "OTHER_OFF",
+                                "qOtherCounted": {
+                                    "qv": "10"
+                                },
+                                "qOtherLimit": {
+                                    "qv": "0"
+                                },
+                                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                                "qForceBadValueKeeping": true,
+                                "qApplyEvenWhenPossiblyWrongResult": true,
+                                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                                "qTotalMode": "TOTAL_OFF",
+                                "qReferencedExpression": {}
+                            },
+                            "qOtherLabel": {},
+                            "qTotalLabel": {},
+                            "qCalcCond": {},
+                            "qAttributeExpressions": []
+                        }
+                    ],
+                    "qMeasures": [
+                        {
+                            "qLibraryId": "XpPvDqf",
+                            "qDef": {
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "TtMt"
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [],
+                            "qCalcCond": {},
+                            "showInPercent": false
+                        },
+                        {
+                            "qLibraryId": "FCzjwjd",
+                            "qDef": {
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "tBqSS"
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [],
+                            "qCalcCond": {},
+                            "showInPercent": false
+                        }
+                    ],
+                    "qInterColumnSortOrder": [
+                        0,
+                        2,
+                        1
+                    ],
+                    "qSuppressZero": true,
+                    "qSuppressMissing": true,
+                    "qInitialDataFetch": [
+                        {
+                            "qLeft": 0,
+                            "qTop": 0,
+                            "qWidth": 17,
+                            "qHeight": 500
+                        }
+                    ],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": -1,
+                    "qNoOfLeftDims": -1,
+                    "qAlwaysFullyExpanded": true,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qLayoutExclude": {}
+                },
+                "refLine": {
+                    "refLines": []
+                },
+                "showTitles": true,
+                "title": "Open & Resolved Cases Over Time",
+                "subtitle": "",
+                "footnote": "",
+                "lineType": "area",
+                "stackedArea": false,
+                "separateStacking": true,
+                "nullMode": "gap",
+                "dataPoint": {
+                    "show": false,
+                    "showLabels": false
+                },
+                "gridLine": {
+                    "auto": true,
+                    "spacing": 2
+                },
+                "color": {
+                    "auto": true,
+                    "mode": "primary",
+                    "singleColor": 3,
+                    "persistent": false,
+                    "measureScheme": "sg",
+                    "reverseScheme": false,
+                    "dimensionScheme": "12"
+                },
+                "legend": {
+                    "show": false,
+                    "dock": "auto",
+                    "showTitle": true
+                },
+                "dimensionAxis": {
+                    "show": "labels",
+                    "label": "auto",
+                    "dock": "bottom"
+                },
+                "measureAxis": {
+                    "show": "labels",
+                    "label": "horizontal",
+                    "dock": "left",
+                    "spacing": 0.5,
+                    "autoMinMax": true,
+                    "minMax": "min",
+                    "min": 0,
+                    "max": 10
+                },
+                "visualization": "linechart",
+                "version": 0.96
+            },
+            "qChildren": []
+        },
+        {
+            "qProperty": {
+                "qInfo": {
+                    "qId": "RuTpzNW",
+                    "qType": "kpi"
+                },
+                "qMetaDef": {},
+                "metadata": {
+                    "name": "",
+                    "description": "",
+                    "tags": []
+                },
+                "showTitles": false,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "showMeasureTitle": true,
+                "textAlign": "center",
+                "fontSize": "M",
+                "useLink": false,
+                "kpiLink": {
+                    "id": "",
+                    "title": ""
+                },
+                "visualization": "kpi",
+                "version": 1,
+                "qHyperCubeDef": {
+                    "qDimensions": [],
+                    "qMeasures": [
+                        {
+                            "qDef": {
+                                "qLabel": "High Priority Cases",
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qDef": "Count( {$<Priority={'High'}, Status -={'Closed'} >} Distinct %CaseId )",
+                                "qNumFormat": {
+                                    "qType": "F",
+                                    "qnDec": 2,
+                                    "qUseThou": 0,
+                                    "qFmt": "#,##0",
+                                    "qDec": ".",
+                                    "qThou": ","
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "CBEFsF",
+                                "numFormatFromTemplate": true,
+                                "conditionalColoring": {
+                                    "useConditionalColoring": false,
+                                    "singleColor": 7,
+                                    "segments": {
+                                        "limits": [],
+                                        "colors": [
+                                            {
+                                                "color": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                "measureAxis": {
+                                    "min": 0,
+                                    "max": 100
+                                }
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [],
+                            "qCalcCond": {}
+                        }
+                    ],
+                    "qInterColumnSortOrder": [
+                        0
+                    ],
+                    "qSuppressMissing": true,
+                    "qInitialDataFetch": [
+                        {
+                            "qLeft": 0,
+                            "qTop": 0,
+                            "qWidth": 500,
+                            "qHeight": 10
+                        }
+                    ],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": -1,
+                    "qNoOfLeftDims": -1,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qLayoutExclude": {
+                        "qHyperCubeDef": {
+                            "qDimensions": [],
+                            "qMeasures": [],
+                            "qInterColumnSortOrder": [],
+                            "qInitialDataFetch": [],
+                            "qReductionMode": "N",
+                            "qMode": "S",
+                            "qPseudoDimPos": -1,
+                            "qNoOfLeftDims": -1,
+                            "qMaxStackedCells": 5000,
+                            "qCalcCond": {}
+                        }
+                    }
+                }
+            },
+            "qChildren": []
+        },
+        {
+            "qProperty": {
+                "qInfo": {
+                    "qId": "JARjh",
+                    "qType": "kpi"
+                },
+                "qMetaDef": {},
+                "metadata": {
+                    "name": "",
+                    "description": "",
+                    "tags": []
+                },
+                "showTitles": false,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "showMeasureTitle": true,
+                "textAlign": "center",
+                "fontSize": "M",
+                "useLink": false,
+                "kpiLink": {
+                    "id": "",
+                    "title": ""
+                },
+                "visualization": "kpi",
+                "version": 1,
+                "qHyperCubeDef": {
+                    "qDimensions": [],
+                    "qMeasures": [
+                        {
+                            "qDef": {
+                                "qLabel": "Medium Priority Cases",
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qDef": "Count( {$<Priority={'Medium'}, Status -={'Closed'} >} Distinct %CaseId )",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "zBCPxQ",
+                                "numFormatFromTemplate": true,
+                                "conditionalColoring": {
+                                    "useConditionalColoring": false,
+                                    "singleColor": 8,
+                                    "segments": {
+                                        "limits": [],
+                                        "colors": [
+                                            {
+                                                "color": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                "measureAxis": {
+                                    "min": 0,
+                                    "max": 100
+                                }
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [],
+                            "qCalcCond": {}
+                        }
+                    ],
+                    "qInterColumnSortOrder": [
+                        0
+                    ],
+                    "qSuppressMissing": true,
+                    "qInitialDataFetch": [
+                        {
+                            "qLeft": 0,
+                            "qTop": 0,
+                            "qWidth": 500,
+                            "qHeight": 10
+                        }
+                    ],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": -1,
+                    "qNoOfLeftDims": -1,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qLayoutExclude": {
+                        "qHyperCubeDef": {
+                            "qDimensions": [],
+                            "qMeasures": [],
+                            "qInterColumnSortOrder": [],
+                            "qInitialDataFetch": [],
+                            "qReductionMode": "N",
+                            "qMode": "S",
+                            "qPseudoDimPos": -1,
+                            "qNoOfLeftDims": -1,
+                            "qMaxStackedCells": 5000,
+                            "qCalcCond": {}
+                        }
+                    }
+                }
+            },
+            "qChildren": []
+        },
+        {
+            "qProperty": {
+                "qInfo": {
+                    "qId": "JsVPe",
+                    "qType": "kpi"
+                },
+                "qMetaDef": {},
+                "metadata": {
+                    "name": "",
+                    "description": "",
+                    "tags": []
+                },
+                "showTitles": false,
+                "title": "",
+                "subtitle": "",
+                "footnote": "",
+                "showMeasureTitle": true,
+                "textAlign": "center",
+                "fontSize": "M",
+                "useLink": false,
+                "kpiLink": {
+                    "id": "",
+                    "title": ""
+                },
+                "visualization": "kpi",
+                "version": 1,
+                "qHyperCubeDef": {
+                    "qDimensions": [],
+                    "qMeasures": [
+                        {
+                            "qDef": {
+                                "qLabel": "Low Priority Cases",
+                                "qTags": [],
+                                "qGrouping": "N",
+                                "qDef": "Count( {$<Priority={'Low'}, Status -={'Closed'} >} Distinct %CaseId )",
+                                "qNumFormat": {
+                                    "qType": "U",
+                                    "qnDec": 10,
+                                    "qUseThou": 0
+                                },
+                                "qAccumulate": 0,
+                                "qActiveExpression": 0,
+                                "qExpressions": [],
+                                "autoSort": true,
+                                "cId": "MeqGCPr",
+                                "numFormatFromTemplate": true,
+                                "conditionalColoring": {
+                                    "useConditionalColoring": false,
+                                    "singleColor": 9,
+                                    "segments": {
+                                        "limits": [],
+                                        "colors": [
+                                            {
+                                                "color": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                "measureAxis": {
+                                    "min": 0,
+                                    "max": 100
+                                }
+                            },
+                            "qSortBy": {
+                                "qSortByNumeric": -1,
+                                "qSortByLoadOrder": 1,
+                                "qExpression": {}
+                            },
+                            "qAttributeExpressions": [],
+                            "qCalcCond": {}
+                        }
+                    ],
+                    "qInterColumnSortOrder": [
+                        0
+                    ],
+                    "qSuppressMissing": true,
+                    "qInitialDataFetch": [
+                        {
+                            "qLeft": 0,
+                            "qTop": 0,
+                            "qWidth": 500,
+                            "qHeight": 10
+                        }
+                    ],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": -1,
+                    "qNoOfLeftDims": -1,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qLayoutExclude": {
+                        "qHyperCubeDef": {
+                            "qDimensions": [],
+                            "qMeasures": [],
+                            "qInterColumnSortOrder": [],
+                            "qInitialDataFetch": [],
+                            "qReductionMode": "N",
+                            "qMode": "S",
+                            "qPseudoDimPos": -1,
+                            "qNoOfLeftDims": -1,
+                            "qMaxStackedCells": 5000,
+                            "qCalcCond": {}
+                        }
+                    }
+                }
+            },
+            "qChildren": []
+        }
+    ]
+}

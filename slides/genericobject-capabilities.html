@@ -1,0 +1,26 @@
+<h3 style="text-align: left;"><span style="color:#FFB224">Capabilities API</h3>
+<pre class="plain" style="width: 100%;box-shadow: none;background:#3f3f3f;margin-top: 0;height:420px;">
+<code id="extensioncode" class="javascript hljs" style="font-size: 0.8em;tab-size:4;max-height: 500px">require(['qlik'], function(qlik) {
+	
+	var app = qlik.openApp('MyApp');
+	app.createSessionObject({
+		TOTALS: {
+			qStringExpression: "='Showing ' & Sum(ContentCounter) & ' tweets & articles.'"
+		},
+		qHyperCubeDef: {
+			qDimensions: [], // Dimensions
+			qMeasures: [], // Measures
+			qSuppressZero: true,
+			qInitialDataFetch: [{
+				qTop: 0,
+				qLeft: 0,
+				qHeight: 500,
+				qWidth: 5
+			}]
+		}	
+	}, function(layout) {
+		console.log(layout.qHyperCube, layout.TOTALS)
+	});
+});
+</code>
+</pre>
